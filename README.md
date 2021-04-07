@@ -7,7 +7,7 @@ All code executable on a standard desktop PC running the Linux distribution *Ubu
 
 # How to cite this repository
 
-```
+```BibTeX
 @misc{
      FastIEEE.2021, 
      author={Jacob F. Fast and Hardik R. Dava and Adrian K. R\"uppel and Dennis Kundrat and Maurice Krauth and Max-Heinrich Laves and Svenja Spindeldreier and L\"uder A. Kahrs and Martin Ptok}, 

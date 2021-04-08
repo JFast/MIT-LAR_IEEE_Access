@@ -17,3 +17,51 @@ All code executable on a standard desktop PC running the Linux distribution *Ubu
      publisher={GitHub}
      }
 ```
+
+# List of Source Files and Descriptions
+
+## Calibration
+
+### Calibration_Procedure.cpp
+
+Read calibration images and save XML file with stereo calibration results.
+
+## (Droplet) Trajectory Approximation
+
+### Trajectory_Identification.cpp
+
+Read raw stereolaryngoscopic frame sequence showing droplet flight and corresponding camera calibration parameters. Perform spatial triangulation of detected droplet centroid positions (using blob instead of Hough circle detection) and identify linear and parabolic trajectory approximations. Used for the analysis of individual droplet flight recordings.
+
+### Avg_Traj_and_Plane_Calculation.cpp
+
+Read 3D droplet centroid positions and associated time stamps from 10 available droplet shooting events obtained by execution of Trajectory_Identification.cpp. Calculate global fit plane, global linear (DEPRECATED MODEL) droplet trajectory approximation and global parabolical (STANDARD MODEL) droplet trajectory approximation. Return CSV files with individual distances of centroid positions to fit plane, fit line and fit parabola. Return fit plane, linear approximation and parabolical approximation as point clouds. Return defining parameters of fit plane, line and parabola in YML file. Used for global analysis of a set of droplet flight recordings acquired at identical system conditions.
+
+## Stereo Reconstruction
+
+### Stereo_Reconstruction_and_Prediction.cpp
+
+Read raw stereolaryngoscopic single frame (or frame sequence) and corresponding camera calibration parameters and perform spatial stereo reconstruction. If desired, calculate droplet impact site based on spatial stereo reconstruction of target and available trajectory parameter file.
+
+## Live Application
+
+### Live_Application.cpp
+
+...
+
+## Stereo Reconstruction Accuracy Assessment
+
+### Point_Cloud_Registration.cpp
+
+Read two point clouds and marker point coordinates of corresponding markers in both point clouds. Optionally crop source point cloud to points contained in a sphere with given center and radius. Calculate rigid transformation between marker positions. Optionally refine transformation by additional ICP step. Visualize and save registered point clouds.
+
+### Congruence_Evaluation.cpp
+
+Read two previously registered point clouds and calculate congruence between them using nearest neighbor Euclidean distance between reconstructed (source) and ground truth (target) point cloud.
+
+### Frame_Extraction.cpp
+
+Read stereo laryngoscopic frame sequence and extract subset of frames for further processing. This procedure is used to obtain input frames for subsequent evaluation of stereo reconstruction accuracy using a 3D phantom of the human larynx.
+
+ALL DISTANCE VALUES IN MM FOR NUMERICAL STABILITY AT SMALL HOROPTER VOLUMES.
+
+ALL TEMPORAL VALUES IN MS FOR NUMERICAL STABILITY AT SMALL TIME SCALES.

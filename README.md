@@ -1,13 +1,21 @@
 # MIT-LAR_IEEE_Access
 This repository contains source code for the targeted, droplet-based stimulation of the laryngeal adductor reflex (LAR) using a stereoscopic laryngoscope.
 
+## Table of contents
+* [Requirements](#requirements)
+* [How to Cite this Repository](#how-to-cite-this-repository)
+* [Descriptions of Source Files](#descriptions-of-source-files)
+* [Notes](#notes)
+
+# Requirements
+
 Required packages: *OpenCV* (tested with version 3.3.1), *Point Cloud Library* (tested with version 1.11.1-dev).
 
 All code executable on a standard desktop PC running the Linux distribution *Ubuntu* (version 18.04.3 LTS).
 
 Code developed using Qt Creator (version 4.5.2).
 
-# How to cite this repository
+# How to Cite this Repository
 
 ```BibTeX
 @misc{
@@ -20,7 +28,7 @@ Code developed using Qt Creator (version 4.5.2).
      }
 ```
 
-# List of Source Files and Descriptions
+# Descriptions of Source Files
 
 ## Calibration
 
@@ -64,7 +72,7 @@ Read two previously registered point clouds and calculate congruence between the
 
 Read stereo laryngoscopic frame sequence and extract subset of frames for further processing. This procedure is used to obtain input frames for subsequent evaluation of stereo reconstruction accuracy using a 3D phantom of the human larynx.
 
-## Notes
+# Notes
 
 ALL DISTANCE VALUES IN MM FOR NUMERICAL STABILITY AT SMALL HOROPTER VOLUMES.
 

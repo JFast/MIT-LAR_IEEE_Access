@@ -62,6 +62,8 @@ Read two previously registered point clouds and calculate congruence between the
 
 Read stereo laryngoscopic frame sequence and extract subset of frames for further processing. This procedure is used to obtain input frames for subsequent evaluation of stereo reconstruction accuracy using a 3D phantom of the human larynx.
 
+## Notes
+
 ALL DISTANCE VALUES IN MM FOR NUMERICAL STABILITY AT SMALL HOROPTER VOLUMES.
 
 ALL TEMPORAL VALUES IN MS FOR NUMERICAL STABILITY AT SMALL TIME SCALES.

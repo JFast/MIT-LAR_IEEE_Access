@@ -15,7 +15,7 @@ All code executable on a standard desktop PC running the Linux distribution *Ubu
 
 Code developed using Qt Creator (version 4.5.2).
 
-The execution of the live application `Live_Application.cpp` requires the SDK of the high-speed camera. It can be downloaded here at no cost: https://idtvision.com/products/software/motion-studio/
+The execution of the live application `Live_Application.cpp` requires the SDK of the high-speed camera (https://idtvision.com/products/software/motion-studio/) and the following terminal command before program execution to change the size of the network adapter's maximum transmission unit: `ifconfig eno1 mtu 9000`.
 
 # How to Cite this Repository
 

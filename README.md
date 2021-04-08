@@ -74,6 +74,6 @@ Read stereo laryngoscopic frame sequence and extract subset of frames for furthe
 
 # Notes
 
-ALL DISTANCE VALUES IN MM FOR NUMERICAL STABILITY AT SMALL HOROPTER VOLUMES.
+All distance values given in mm for numerical stability at small horopter volumes.
 
-ALL TEMPORAL VALUES IN MS FOR NUMERICAL STABILITY AT SMALL TIME SCALES.
+All temporal values given in ms for numerical stability at small time scales.

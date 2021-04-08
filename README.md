@@ -40,17 +40,17 @@ Read calibration images and save XML file with stereo calibration results.
 
 ### Trajectory_Identification.cpp
 
-Read raw stereolaryngoscopic frame sequence showing droplet flight and corresponding camera calibration parameters. Perform spatial triangulation of detected droplet centroid positions (using blob instead of Hough circle detection) and identify linear and parabolic trajectory approximations. Used for the analysis of individual droplet flight recordings.
+Read raw stereolaryngoscopic frame sequence showing droplet flight and corresponding camera calibration parameters. Perform spatial triangulation of detected droplet centroid positions (using blob detection) and identify linear (DEPRECATED MODEL) and parabolic (STANDARD MODEL) trajectory approximations. Used for the analysis of individual droplet flight recordings.
 
 ### Avg_Traj_and_Plane_Calculation.cpp
 
-Read 3D droplet centroid positions and associated time stamps from 10 available droplet shooting events obtained by execution of Trajectory_Identification.cpp. Calculate global fit plane, global linear (DEPRECATED MODEL) droplet trajectory approximation and global parabolical (STANDARD MODEL) droplet trajectory approximation. Return CSV files with individual distances of centroid positions to fit plane, fit line and fit parabola. Return fit plane, linear approximation and parabolical approximation as point clouds. Return defining parameters of fit plane, line and parabola in YML file. Used for global analysis of a set of droplet flight recordings acquired at identical system conditions.
+Read triangulated spatial droplet centroid positions and associated time stamps from a set of available droplet shooting events obtained by previous execution of `Trajectory_Identification.cpp`. Calculate global fit plane, global linear (DEPRECATED MODEL) droplet trajectory approximation and global parabolic (STANDARD MODEL) droplet trajectory approximation. Return CSV files with individual distances of centroid positions to fit plane, fit line and fit parabola. Return fit plane, linear approximation and parabolical approximation as point clouds. Return defining parameters of fit plane, line and parabola in YML file. Used for global analysis of a set of droplet flight recordings acquired at identical system conditions.
 
 ## Stereo Reconstruction
 
 ### Stereo_Reconstruction_and_Prediction.cpp
 
-Read raw stereolaryngoscopic single frame (or frame sequence) and corresponding camera calibration parameters and perform spatial stereo reconstruction. If desired, calculate droplet impact site based on spatial stereo reconstruction of target and available trajectory parameter file.
+Read raw stereolaryngoscopic single frame (or frame sequence) and camera settings and calibration files and perform spatial stereo reconstruction. If desired, calculate droplet impact site based on spatial stereo reconstruction of target and available trajectory parameter file.
 
 ## Live Application
 
@@ -66,7 +66,7 @@ Read two point clouds and marker point coordinates of corresponding markers in b
 
 ### Congruence_Evaluation.cpp
 
-Read two previously registered point clouds and calculate congruence between them using nearest neighbor Euclidean distance between reconstructed (source) and ground truth (target) point cloud.
+Read two previously registered point clouds and calculate congruence between them using nearest neighbor Euclidean distance between the reconstructed (source) and ground truth (target) point cloud.
 
 ### Frame_Extraction.cpp
 

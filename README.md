@@ -15,7 +15,7 @@ All code executable on a standard desktop PC running the Linux distribution *Ubu
 
 Code developed using Qt Creator (version 4.5.2).
 
-The execution of the live application `Live_Application.cpp` requires the SDK of the high-speed camera (https://idtvision.com/products/software/motion-studio/) and the following terminal command before program execution to change the size of the network adapter's maximum transmission unit: `ifconfig eno1 mtu 9000`.
+The execution of the live application `Live_Application.cpp` requires the SDK of the specific high-speed camera used in this work (https://idtvision.com/products/software/motion-studio/) and the following terminal command has to be applied before program execution to change the size of the network adapter's maximum transmission unit: `ifconfig eno1 mtu 9000`.
 
 # How to Cite this Repository
 
@@ -42,25 +42,23 @@ Read calibration images and save XML file with stereo calibration results.
 
 ### Trajectory_Identification.cpp
 
-Read raw stereolaryngoscopic frame sequence showing droplet flight and corresponding camera calibration parameters. Perform spatial triangulation of detected droplet centroid positions (using blob detection) and identify linear (DEPRECATED MODEL) and parabolic (STANDARD MODEL) trajectory approximations. Used for the analysis of individual droplet flight recordings.
+Read raw stereolaryngoscopic frame sequence showing droplet flight and corresponding camera calibration parameters. Perform spatial triangulation of detected droplet centroid positions (using blob detection) and identify linear (DEPRECATED MODEL) and parabolic (STANDARD MODEL) trajectory approximations. Can be ued for the analysis of individual droplet flight recordings.
 
 ### Avg_Traj_and_Plane_Calculation.cpp
 
 Read triangulated spatial droplet centroid positions and associated time stamps from a set of available droplet shooting events obtained by previous execution of `Trajectory_Identification.cpp`. Calculate global fit plane, global linear (DEPRECATED MODEL) droplet trajectory approximation and global parabolic (STANDARD MODEL) droplet trajectory approximation. Return CSV files with individual distances of centroid positions to fit plane, fit line and fit parabola. Return fit plane, linear approximation and parabolical approximation as point clouds. Return defining parameters of fit plane, line and parabola in YML file. Used for global analysis of a set of droplet flight recordings acquired at identical system conditions.
 
-## Stereo Reconstruction
+## Impact Site Prediction
 
 ### Stereo_Reconstruction_and_Prediction.cpp
 
 Read raw stereolaryngoscopic single frame (or frame sequence) and camera settings and calibration files and perform spatial stereo reconstruction. If desired, calculate droplet impact site based on spatial stereo reconstruction of target and available trajectory parameter file.
 
-## Live Application
-
 ### Live_Application.cpp
 
-...
+Connect to high-speed camera (here: OS7-v3-S1) and perform near real-time impact site indication in the left laryngoscopic live view, if desired by user. Impact site prediction algorithm identical to the approach used in `Stereo_Reconstruction_and_Prediction.cpp`.
 
-## Stereo Reconstruction Accuracy Assessment
+## Evaluation of Stereo Reconstruction Quality
 
 ### Point_Cloud_Registration.cpp
 
@@ -69,6 +67,8 @@ Read two point clouds and marker point coordinates of corresponding markers in b
 ### Congruence_Evaluation.cpp
 
 Read two previously registered point clouds and calculate congruence between them using nearest neighbor Euclidean distance between the reconstructed (source) and ground truth (target) point cloud.
+
+## Tools
 
 ### Frame_Extraction.cpp
 

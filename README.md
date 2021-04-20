@@ -34,13 +34,13 @@ The execution of the live application `Live_Application.cpp` requires the SDK of
 
 ## Calibration
 
-### Calibration_Procedure.cpp
+### `Calibration_Procedure.cpp`
 
 Read calibration images and save XML file with stereo calibration results.
 
 ## (Droplet) Trajectory Approximation
 
-### Trajectory_Identification.cpp
+### `Trajectory_Identification.cpp`
 
 Read raw stereolaryngoscopic frame sequence showing droplet flight and corresponding camera calibration parameters. Perform spatial triangulation of detected droplet centroid positions (using blob detection) and identify linear (DEPRECATED MODEL) and parabolic (STANDARD MODEL) trajectory approximations. Can be ued for the analysis of individual droplet flight recordings.
 
@@ -50,27 +50,27 @@ Read triangulated spatial droplet centroid positions and associated time stamps 
 
 ## Impact Site Prediction
 
-### Stereo_Reconstruction_and_Prediction.cpp
+### `Stereo_Reconstruction_and_Prediction.cpp`
 
 Read raw stereolaryngoscopic single frame (or frame sequence) and camera settings and calibration files and perform spatial stereo reconstruction. If desired, calculate droplet impact site based on spatial stereo reconstruction of target and available trajectory parameter file.
 
-### Live_Application.cpp
+### `Live_Application.cpp`
 
 Connect to high-speed camera (here: OS7-v3-S1) and perform near real-time impact site indication in the left laryngoscopic live view, if desired by user. Impact site prediction algorithm identical to the approach used in `Stereo_Reconstruction_and_Prediction.cpp`.
 
 ## Evaluation of Stereo Reconstruction Quality
 
-### Point_Cloud_Registration.cpp
+### `Point_Cloud_Registration.cpp`
 
 Read two point clouds and marker point coordinates of corresponding markers in both point clouds. Optionally crop source point cloud to points contained in a sphere with given center and radius. Calculate rigid transformation between marker positions. Optionally refine transformation by additional ICP step. Visualize and save registered point clouds.
 
-### Congruence_Evaluation.cpp
+### `Congruence_Evaluation.cpp`
 
 Read two previously registered point clouds and calculate congruence between them using nearest neighbor Euclidean distance between the reconstructed (source) and ground truth (target) point cloud.
 
 ## Tools
 
-### Frame_Extraction.cpp
+### `Frame_Extraction.cpp`
 
 Read stereo laryngoscopic frame sequence and extract subset of frames for further processing. This procedure is used to obtain input frames for subsequent evaluation of stereo reconstruction accuracy using a 3D phantom of the human larynx.
 

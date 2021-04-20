@@ -56,7 +56,7 @@ Read raw stereolaryngoscopic single frame (or frame sequence) and camera setting
 
 ### `Live_Application.cpp`
 
-Connect to high-speed camera (here: OS7-v3-S1) and perform near real-time impact site indication in the left laryngoscopic live view, if desired by user. Impact site prediction algorithm identical to the approach used in `Stereo_Reconstruction_and_Prediction.cpp`.
+Connect to high-speed camera (here: OS7-v3-S1, IDT, Inc., Pasadena, USA) and perform near real-time impact site indication in the left laryngoscopic live view, if desired by user. Impact site prediction algorithm identical to the approach used in `Stereo_Reconstruction_and_Prediction.cpp`.
 
 ## Evaluation of Stereo Reconstruction Quality
 

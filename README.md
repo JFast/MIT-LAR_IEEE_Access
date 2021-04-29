@@ -24,7 +24,7 @@ The execution of the live application `Live_Application.cpp` requires the SDK of
      FastIEEE.2021, 
      author={Jacob F. Fast and Hardik R. Dava and Adrian K. R\"uppel and Dennis Kundrat and Maurice Krauth and Max-Heinrich Laves and Svenja Spindeldreier and L\"uder A. Kahrs and Martin Ptok}, 
      year={2021},
-     title={Code repository associated with the contribution "Stereo laryngoscopic impact site prediction for targeted, droplet-based stimulation of the laryngeal adductor reflex for latency measurements"}, 
+     title={Code repository associated with the contribution "Stereo laryngoscopic impact site prediction for a targeted, droplet-based stimulation of the laryngeal adductor reflex"}, 
      DOI={},
      publisher={GitHub}
      }

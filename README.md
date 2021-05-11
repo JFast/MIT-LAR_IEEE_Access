@@ -42,11 +42,11 @@ Read calibration images and save XML file with stereo calibration results.
 
 ### `Trajectory_Identification.cpp`
 
-Read raw stereolaryngoscopic frame sequence showing droplet flight and corresponding camera calibration parameters. Perform spatial triangulation of detected droplet centroid positions (using blob detection) and identify linear (DEPRECATED MODEL) and parabolic (STANDARD MODEL) trajectory approximations. Can be ued for the analysis of individual droplet flight recordings.
+Read raw stereolaryngoscopic frame sequence showing droplet flight and corresponding camera calibration parameters. Perform spatial triangulation of detected droplet centroid positions (using blob detection) and identify linear (DEPRECATED) and parabolic (STANDARD) trajectory approximations. Can be ued for the analysis of individual droplet flight recordings.
 
 ### `Avg_Traj_and_Plane_Calculation.cpp`
 
-Read triangulated spatial droplet centroid positions and associated time stamps from a set of available droplet shooting events obtained by previous execution of `Trajectory_Identification.cpp`. Calculate global fit plane, global linear (DEPRECATED MODEL) droplet trajectory approximation and global parabolic (STANDARD MODEL) droplet trajectory approximation. Return CSV files with individual distances of centroid positions to fit plane, fit line and fit parabola. Return fit plane, linear approximation and parabolical approximation as point clouds. Return defining parameters of fit plane, line and parabola in YML file. Used for global analysis of a set of droplet flight recordings acquired at identical system conditions.
+Read triangulated spatial droplet centroid positions and associated time stamps from a set of available droplet shooting events obtained by previous execution of `Trajectory_Identification.cpp`. Calculate global fit plane, global linear (DEPRECATED) droplet trajectory approximation and global parabolic (STANDARD) droplet trajectory approximation. Return CSV files with individual distances of centroid positions to fit plane, fit line and fit parabola. Return fit plane, linear approximation and parabolical approximation as point clouds. Return defining parameters of fit plane, line and parabola in YML file. Used for global analysis of a set of droplet flight recordings acquired at identical system conditions.
 
 ## Impact Site Prediction
 

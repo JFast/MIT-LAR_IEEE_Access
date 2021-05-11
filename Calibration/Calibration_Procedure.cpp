@@ -925,7 +925,7 @@ int main(int argc, char *argv[])
         }
 
         // calculate position of circles in calibration pattern in pattern coordinate system in multiples of fDistanceBetweenCircles
-        // algorithm according to OpenCV documentation (pattern turned 90 degress CCW, go through pattern column per column, starting on top left
+        // algorithm according to OpenCV documentation (pattern turned 90 degrees CCW, go through pattern column per column, starting on top left)
 
         for (int k = 0; k < circlesGridSize.height; k++)
         {

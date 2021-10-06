@@ -1,5 +1,5 @@
 # MIT-LAR_IEEE_Access
-This repository contains source code for the targeted, droplet-based stimulation of the laryngeal adductor reflex (LAR) using a stereoscopic laryngoscope.
+This repository contains source code for the [targeted, droplet-based stimulation of the laryngeal adductor reflex (LAR) using a stereoscopic laryngoscope.](https://doi.org/10.1109/ACCESS.2021.3103049)
 
 # Table of Contents
 * [Requirements](#requirements)
